@@ -1,9 +1,10 @@
 import {Navigation} from "./Navigation";
+import Logo from "./src/images/Logo.png";
 
 export const Header = (props) => {
     return (
         <header id='header'>
-            <h1>Header</h1>
+            <div className='logo'/>
             <Navigation/>
         </header>
     )
