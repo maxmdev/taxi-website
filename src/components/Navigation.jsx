@@ -6,7 +6,6 @@ export const Navigation = (props) => {
             <li>Отзывы</li>
             <li>Как начать</li>
             <li>Контакты</li>
-            <li>(022) 511-200</li>
         </nav>
     )
 }
