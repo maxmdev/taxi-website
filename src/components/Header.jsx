@@ -9,7 +9,7 @@ export const Header = (props) => {
                 <div className='header-container'>
                     <div className='header-logo'>
                         <div className='logo-text'>
-                            Top Taxi
+                            <a href="#header">Top Taxi</a>
                         </div>
                     </div>
                     <Navigation/>
