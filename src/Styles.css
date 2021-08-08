@@ -47,5 +47,6 @@
 }
 
 .phone-link {
-
+  background: url("./images/phone-icon.png") no-repeat left;
+  background-size: contain;
 }

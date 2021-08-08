@@ -3,16 +3,24 @@ body {
   font-family: 'SF Pro D', sans-serif;
 }
 
-nav {
+nav, nav a {
   display: flex;
   flex-direction: row;
   align-items: center;
   color: #595c65;
 }
 
-nav li {
+nav li, nav a {
   list-style: none;
   margin-left: 10px;
+}
+
+nav a {
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #F6F6F6;
 }
 
 code {
