@@ -1,6 +1,6 @@
 import {Navigation} from "./Navigation";
 import {Button} from "./Button";
-import {PhoneLink} from "./PhoneLink";
+import {PhoneButton} from "./PhoneButton";
 
 export const Header = (props) => {
     return (
@@ -24,7 +24,7 @@ export const Header = (props) => {
                 </div>
                 <div className='header-content__contact'>
                     <Button text='Оставить заявку' />
-                    <PhoneLink href='#' text='Заказать звонок' />
+                    <PhoneButton href='#' text='Заказать звонок' />
                 </div>
             </div>
         </header>

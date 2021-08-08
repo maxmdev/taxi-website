@@ -1,6 +1,11 @@
 .container {
   max-width: 980px;
 }
+/**0% 0% 100% 0% / 50% 10% 61% 0% **/
+
+h1 {
+  color: #ffffff;
+}
 
 .header-nav {
   background: #1e1b23;
@@ -30,6 +35,11 @@
   width: 500px;
 }
 
+.header-content__heading p {
+  color: #F6F6F6;
+  margin: 40px 0;
+}
+
 .logo-text {
   margin-left: 24px;
   margin-top: 20px;
@@ -47,6 +57,23 @@
 }
 
 .phone-link {
-  background: url("./images/phone-icon.png") no-repeat left;
-  background-size: contain;
+  background: none;
+}
+
+.phone-link:hover {
+  cursor: pointer;
+  opacity: 0.8;
+
+}
+
+.phone-link span {
+  display: inline-block;
+  background: #FFC837;
+  mask-image: url("./images/incoming-call.svg");
+  mask-size: contain;
+  mask-position: center;
+  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
 }
