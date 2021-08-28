@@ -4,7 +4,7 @@ import {PhoneButton} from "./PhoneButton";
 
 export const Header = (props) => {
     return (
-        <header id='header'>
+        <header id='header' className='city_background'>
             <div className='header-nav'>
                 <div className='header-container'>
                     <div className='header-logo'>
@@ -18,13 +18,15 @@ export const Header = (props) => {
             </div>
 
             <div className='header-content'>
-                <div className='header-content__heading'>
-                    <h1>Начните работу в такси всего за несколько часов</h1>
-                    <p>Станьте водителем одного из надежных таксопарков Кишинева</p>
-                </div>
-                <div className='header-content__contact'>
-                    <Button text='Оставить заявку' />
-                    <PhoneButton href='#' text='Заказать звонок' />
+                <div className='header-content__right'>
+                    <div className='header-content__heading'>
+                        <h1>Начните работу в такси всего за несколько часов</h1>
+                        <p>Станьте водителем одного из надежных таксопарков Кишинева и зарабатывайте уже сегодня</p>
+                    </div>
+                    <div className='header-content__contact'>
+                        <Button text='Оставить заявку' />
+                        <PhoneButton href='#' text='Заказать звонок' />
+                    </div>
                 </div>
             </div>
         </header>

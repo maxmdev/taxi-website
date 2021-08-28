@@ -1,7 +1,6 @@
 .container {
   max-width: 980px;
 }
-/**0% 0% 100% 0% / 50% 10% 61% 0% **/
 
 h1 {
   color: #ffffff;
@@ -36,13 +35,21 @@ h1 {
 }
 
 .header-content {
-  margin: 0 40%;
-  width: 500px;
+  max-width: 980px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.header-content__right {
+  max-width: 500px;
+  margin-left: auto;
 }
 
 .header-content__heading p {
   color: #F6F6F6;
   margin: 40px 0;
+  line-height: 30px;
 }
 
 .logo-text {
@@ -86,4 +93,9 @@ h1 {
   width: 30px;
   height: 30px;
   margin-right: 10px;
+}
+
+.city_background {
+  background-repeat: no-repeat;
+  background-size: contain;
 }
