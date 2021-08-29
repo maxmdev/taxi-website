@@ -7,7 +7,7 @@ h1 {
 }
 
 .header-nav {
-  background: #1e1b23;
+  background: #21252D;
   color: #fff;
 }
 
@@ -42,14 +42,35 @@ h1 {
 }
 
 .header-content__right {
+  z-index: 3;
   max-width: 500px;
   margin-left: auto;
+  padding: 100px 0 0;
 }
 
 .header-content__heading p {
   color: #F6F6F6;
   margin: 40px 0;
   line-height: 30px;
+}
+
+.header-wave {
+  height: calc(206px + 5vw);
+  background-image: url('./images/waves.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.header-taxi {
+  z-index: 2;
+  position: relative;
+  margin-left: calc(20px + 7vw);
+  top: -100px;
+  height: 300px;
+  background-image: url('./images/prius.png');
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .logo-text {
@@ -65,7 +86,7 @@ h1 {
 }
 
 .phone {
-  font-size: calc(14px + 1vw);
+  font-size: calc(10px + 1vw);
   margin-left: 0;
 }
 
@@ -97,5 +118,6 @@ h1 {
 
 .city_background {
   background-repeat: no-repeat;
-  background-size: contain;
+  background-position: center;
+  background-image: url('./images/city.png');
 }

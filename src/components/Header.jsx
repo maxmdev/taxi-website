@@ -29,6 +29,9 @@ export const Header = (props) => {
                     </div>
                 </div>
             </div>
+            <div className='header-wave'>
+                <div className='header-taxi'/>
+            </div>
         </header>
     )
 }
