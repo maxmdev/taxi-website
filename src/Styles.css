@@ -2,6 +2,7 @@
   max-width: 980px;
 }
 
+/* Header */
 h1 {
   color: #ffffff;
 }
@@ -120,4 +121,24 @@ h1 {
   background-repeat: no-repeat;
   background-position: center;
   background-image: url('./images/city.png');
+}
+
+/* Section Partnership */
+.partnership {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-content: center;
+  align-items: center;
+}
+
+.partnership h2 {
+  margin-top: 2px;
+  margin-bottom: 4px;
+}
+
+.partnership p {
+  margin-top: 4px;
+  color: #595c65;
+  font-size: 15px;
 }

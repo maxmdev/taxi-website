@@ -8,10 +8,10 @@ function App() {
     const [landingPageData, setLandingPageData] = useState({});
 
   return (
-      <div>
-      <Header data={Header}/>
+      <>
+          <Header data={Header}/>
           <Partnership data={Partnership}/>
-      </div>
+      </>
   )
 }
 
