@@ -1,4 +1,3 @@
-///import logo from './logo.svg';
 import {useState, useEffect} from "react";
 import './Styles.css';
 import {Header} from './components/Header';
@@ -10,7 +9,7 @@ function App() {
   return (
       <>
           <Header data={Header}/>
-          <Partnership data={Partnership}/>
+          <Partnership/>
       </>
   )
 }
