@@ -1,11 +1,33 @@
-export const Navigation = (props) => {
+const defaultProps = {
+    links: [
+        {
+            href: "#offer",
+            text: "Partnership"
+        },
+        {
+            href: "#partners",
+            text: "Partners"
+        },
+        {
+            href: "#feedback",
+            text: "Feedback"
+        },
+        {
+            href: "#start",
+            text: "How to Start"
+        },
+        {
+            href: "#contact",
+            text: "Contacts"
+        }
+    ]}
+
+export const Navigation = ({props = defaultProps}) => {
     return (
-        <nav>
-            <li><a href="#offer">Сотрудничество</a></li>
-            <li><a href="#parnters">Наши партнеры</a></li>
-            <li><a href="#feedback">Отзывы</a></li>
-            <li><a href="#start">Как начать</a></li>
-            <li><a href="#contact">Контакты</a></li>
+        <nav className="header-container__menu">
+            {
+                props.links.map(link => <li key={link.href.substr(1)}><a href={link.href}>{link.text}</a></li> )
+            }
         </nav>
     )
 }

@@ -22,7 +22,7 @@ h1 {
   align-items: center;
 }
 
-.header-logo {
+.header-container__logo {
   background-image: url("./images/Logo.png");
   background-size: contain;
   background-repeat: no-repeat;
@@ -30,7 +30,7 @@ h1 {
   height: 40px;
 }
 
-.header-logo:hover {
+.header-container__logo:hover {
   cursor: pointer;
   opacity: 0.8;
 }
@@ -86,12 +86,12 @@ h1 {
   color: #F6F6F6;
 }
 
-.phone {
+.header-container__phone {
   font-size: calc(10px + 1vw);
   margin-left: 0;
 }
 
-.phone:hover {
+.header-container__phone:hover {
   cursor: pointer;
 }
 
@@ -125,6 +125,7 @@ h1 {
 
 /* Section Partnership */
 .partnership {
+  margin: 0 0 40px;
   display: flex;
   flex-direction: column;
   justify-items: center;
@@ -133,6 +134,7 @@ h1 {
 }
 
 .partnership h2 {
+  color: #21252D;
   margin-top: 2px;
   margin-bottom: 4px;
 }
@@ -141,4 +143,26 @@ h1 {
   margin-top: 4px;
   color: #595c65;
   font-size: 15px;
+}
+
+.partnership-content {
+  justify-items: center;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.partnership-content__info {
+  background: #ffffff;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.partnership-content__info h4 {
+  padding: 10px 0;
+}
+
+.partnership-content__info p {
+  padding: 10px 30px;
+  font-size: 14px;
 }
