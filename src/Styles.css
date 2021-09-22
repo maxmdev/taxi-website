@@ -148,21 +148,62 @@ h1 {
 .partnership-content {
   justify-items: center;
   margin: 0 auto;
+  max-width: 740px;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
 
 .partnership-content__info {
+  margin: 0 0 40px;
+  width: 340px;
   background: #ffffff;
   border-radius: 10px;
   text-align: center;
 }
 
 .partnership-content__info h4 {
-  padding: 10px 0;
+  padding: 10px 0 0;
+}
+
+.info-image {
+  margin: 0 auto;
+  height: 80px;
+  width: 80px;
+  border-radius: 8px;
+  box-shadow: 0px 10px 13px -5px rgba(151,143,143,0.75);
+  -webkit-box-shadow: 0px 10px 13px -5px rgba(151,143,143,0.75);
+  -moz-box-shadow: 0px 10px 13px -5px rgba(151,143,143,0.75);
+}
+
+.info-image__start {
+  background: url('./images/icons/rocket.svg') center no-repeat;
+  background-size: 80%;
+}
+
+.info-image__payments {
+  background: url('./images/icons/money.svg') center no-repeat;
+  background-size: 80%;
+}
+
+.info-image__schedule {
+  background: url('./images/icons/schedule.svg') center no-repeat;
+  background-size: 80%;
+}
+
+.info-image__support {
+  background: url('./images/icons/support.svg') center no-repeat;
+  background-size: 80%;
+}
+
+.info-border {
+  margin: 0 auto;
+  padding: 0;
+  max-width: 40px;
+  border-bottom: 4px solid #ff9933;
 }
 
 .partnership-content__info p {
   padding: 10px 30px;
   font-size: 14px;
+  color: #595c65;
 }
