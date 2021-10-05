@@ -3,6 +3,7 @@ export const SectionHeader = (props) => {
         <section className={props.className}>
             <h2>{props.heading}</h2>
             <p>{props.description}</p>
+            {props.content}
         </section>
     )
 }

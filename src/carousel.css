@@ -1,0 +1,45 @@
+.carousel {
+    background: #15151b;
+}
+
+.carousel-wrapper {
+    margin: 40px auto 20px auto;
+    max-width: 980px;
+    overflow: hidden;
+}
+
+.carousel-wrapper__inner {
+    margin: 40px 0;
+    white-space: nowrap;
+    max-width: 960px;
+    transition: transform 0.3s;
+}
+
+.carousel-item {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    color: #F6F6F6;
+}
+
+.carousel-wrapper__carousel-indicators {
+    background: #15151b;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    height: 0;
+    top: -90px;
+}
+
+.carousel-wrapper__carousel-indicators button:hover {
+    cursor: pointer;
+}
+
+button.carousel-indicators__prev {
+    background: url("./images/icons/arrow-left.svg") left no-repeat;
+}
+
+button.carousel-indicators__next {
+    background: url("./images/icons/arrow-right.svg") right no-repeat;
+}
