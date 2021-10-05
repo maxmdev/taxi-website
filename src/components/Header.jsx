@@ -8,7 +8,7 @@ const defaultProps = {
     headerDescription: "Become a driver of the reliable taxi company in your city and earn money today",
     applyButtonText: "Contact us",
     requestButtonText: "Request a call",
-    headerLogoText: "Tox Taxi"
+    headerLogoText: "Top Taxi"
 }
 
 export const Header = ({props = defaultProps}) => {

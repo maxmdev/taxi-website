@@ -35,21 +35,23 @@ export const Partnership = ({props = defaultProps}) => {
                 className={props.classname}
                 heading={props.heading}
                 description={props.description}
-            />
-            <div className="partnership-content">
-                {
-                    props.blocks.map(block => {
-                        return (
-                            <div key={block.key} className="partnership-content__info">
-                                <div className={'info-image info-image__' + block.key}/>
-                                <h4>{block.title}</h4>
-                                <div className='info-border'/>
-                                <p>{block.description}</p>
-                            </div>
-                        )
-                    })
+                content = {
+                    <div className="partnership-content">
+                        {
+                            props.blocks.map(block => {
+                                return (
+                                    <div key={block.key} className="partnership-content__info">
+                                        <div className={'info-image info-image__' + block.key}/>
+                                        <h4>{block.title}</h4>
+                                        <div className='info-border'/>
+                                        <p>{block.description}</p>
+                                    </div>
+                                )
+                            })
+                        }
+                    </div>
                 }
-            </div>
+            />
         </>
     )
 }

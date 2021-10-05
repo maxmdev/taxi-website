@@ -148,14 +148,13 @@ h1 {
 .partnership-content {
   justify-items: center;
   margin: 0 auto;
-  max-width: 740px;
+  max-width: 840px;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
 
 .partnership-content__info {
-  margin: 0 0 40px;
-  width: 340px;
+  margin: 40px 40px;
   background: #ffffff;
   border-radius: 10px;
   text-align: center;

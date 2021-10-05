@@ -6,6 +6,7 @@ const defaultProps = {
     className: 'partners',
     heading: 'Our Partners',
     description: 'Reliable taxi aggregators',
+    id: 'partners',
     partners: [
         {
             href: '#faketaxi',
@@ -71,6 +72,7 @@ export const Partners = ({props = defaultProps}) => {
                 className={props.className}
                 heading = {props.heading}
                 description = {props.description}
+                id = {props.id}
                 content = {
                     <Carousel>
                         {
