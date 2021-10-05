@@ -239,13 +239,15 @@ h1 {
 
 /* Section Reviews */
 .reviews {
-  margin: 80px auto;
+  background: #ffffff;
+  padding:  0 0 40px 0;
 }
 
 .reviews h2 {
   text-align: center;
   color: #21252D;
   margin: 0;
+  padding: 100px 0 0 0;
 }
 
 .reviews p {
@@ -264,4 +266,18 @@ h1 {
   max-width: 50px;
   border-bottom: 10px solid #ff9933;
   opacity: 0.5;
+}
+
+.reviews-content__comments {
+  margin: 0 auto;
+  height: 500px;
+  max-width: 600px;
+  border-radius: 16px;
+  box-shadow: 0 10px 13px -5px rgba(151,143,143,0.75);
+  -webkit-box-shadow: 0 10px 13px -5px rgba(151,143,143,0.75);
+  -moz-box-shadow: 0 10px 13px -5px rgba(151,143,143,0.75);
+  background: url('./images/icons/quote.svg') no-repeat;
+  background-position-x: right;
+  background-position-y: top;
+  background-size: 30%;
 }

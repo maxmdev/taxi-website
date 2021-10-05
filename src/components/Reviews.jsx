@@ -18,6 +18,9 @@ export const Reviews = ({props = defaultProps}) => {
             content={
                 <div className='reviews-content'>
                     <div className='reviews-content__border'/>
+                    <div className='reviews-content__comments'>
+
+                    </div>
                 </div>
             }
         />

@@ -51,7 +51,7 @@ export const Partners = ({props = defaultProps}) => {
             content = {
                 <Carousel>
                     {
-                        props.partners.map(partner => <CarouselItem><Partner props={partner}/></CarouselItem>)
+                        props.partners.map(partner => <CarouselItem key={partner.src}><Partner props={partner}/></CarouselItem>)
                     }
                 </Carousel>
             }
