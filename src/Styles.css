@@ -8,7 +8,9 @@ h1 {
 }
 
 .header-nav {
-  background: #21252D;
+  /* background: #21252D */
+  background: rgb(33, 37, 45);
+  background: linear-gradient(90deg, rgba(33,37,45,1) 0%, rgba(42,36,47,1) 100%);
   color: #fff;
 }
 
