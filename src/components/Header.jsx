@@ -13,19 +13,19 @@ const defaultProps = {
 
 export const Header = ({props = defaultProps}) => {
     return (
-        <header id='header' className='city_background'>
-            <div className='header-nav'>
-                <div className='header-container'>
-                    <div className='header-container__logo'>
-                        <div className='logo-text'>
-                            <a href="#header">{props.headerLogoText}</a>
-                        </div>
+        <>
+        <div className='header-nav'>
+            <div className='header-container'>
+                <div className='header-container__logo'>
+                    <div className='logo-text'>
+                        <a href="#header">{props.headerLogoText}</a>
                     </div>
-                    <Navigation/>
-                    <span className='header-container__phone'>{props.headerPhoneNumber}</span>
                 </div>
+                <Navigation/>
+                <span className='header-container__phone'>{props.headerPhoneNumber}</span>
             </div>
-
+        </div>
+        <header id='header' className='city_background'>
             <div className='header-content'>
                 <div className='header-content__right'>
                     <div className='header-content__heading'>
@@ -42,5 +42,6 @@ export const Header = ({props = defaultProps}) => {
                 <div className='header-taxi'/>
             </div>
         </header>
+        </>
     )
 }
