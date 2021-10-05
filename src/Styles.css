@@ -148,15 +148,15 @@ h1 {
 .partnership-content {
   justify-items: center;
   margin: 0 auto;
-  max-width: 840px;
+  max-width: 768px;
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
 
 .partnership-content__info {
-  margin: 40px 40px;
+  margin: 20px 20px;
   background: #ffffff;
-  border-radius: 10px;
+  border-radius: 16px;
   text-align: center;
 }
 
@@ -168,7 +168,7 @@ h1 {
   margin: 0 auto;
   height: 80px;
   width: 80px;
-  border-radius: 8px;
+  border-radius: 16px;
   box-shadow: 0 10px 13px -5px rgba(151,143,143,0.75);
   -webkit-box-shadow: 0 10px 13px -5px rgba(151,143,143,0.75);
   -moz-box-shadow: 0 10px 13px -5px rgba(151,143,143,0.75);
@@ -225,7 +225,7 @@ h1 {
 
 .partners p {
   color: #60636f;
-  font-size: 14px;
+  font-size: 15px;
   font-weight: lighter;
 }
 

@@ -37,9 +37,19 @@
 }
 
 button.carousel-indicators__prev {
-    background: url("./images/icons/arrow-left.svg") left no-repeat;
+    mask: url("./images/icons/arrow-left.svg") left no-repeat;
+    background: #7a7f8a;
+}
+
+button.carousel-indicators__prev:hover {
+    background: #F6F6F6;
 }
 
 button.carousel-indicators__next {
-    background: url("./images/icons/arrow-right.svg") right no-repeat;
+    mask: url("./images/icons/arrow-right.svg") right no-repeat;
+    background: #7a7f8a;
+}
+
+button.carousel-indicators__next:hover {
+    background: #F6F6F6;
 }

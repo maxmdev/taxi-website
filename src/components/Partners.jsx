@@ -67,20 +67,18 @@ const defaultProps = {
 
 export const Partners = ({props = defaultProps}) => {
     return (
-        <>
-            <SectionHeader
-                className={props.className}
-                heading = {props.heading}
-                description = {props.description}
-                id = {props.id}
-                content = {
-                    <Carousel>
-                        {
-                            props.partners.map(partner => <CarouselItem><Partner props={partner}/></CarouselItem>)
-                        }
-                    </Carousel>
-                }
-            />
-        </>
+        <SectionHeader
+            className={props.className}
+            heading = {props.heading}
+            description = {props.description}
+            id = {props.id}
+            content = {
+                <Carousel>
+                    {
+                        props.partners.map(partner => <CarouselItem><Partner props={partner}/></CarouselItem>)
+                    }
+                </Carousel>
+            }
+        />
     )
 }
