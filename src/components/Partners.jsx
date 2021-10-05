@@ -37,30 +37,6 @@ const defaultProps = {
             title: 'Maxim Taxi',
             src: 'maxim.png',
             srcOver: 'hover/maxim.png'
-        },
-        {
-            href: '#yandex',
-            title: 'YandexTaxi',
-            src: 'yandex.png',
-            srcOver: 'hover/yandex.png'
-        },
-        {
-            href: '#mytaxi',
-            title: 'My Taxi',
-            src: 'mytaxi.png',
-            srcOver: 'hover/mytaxi.png'
-        },
-        {
-            href: '#uber',
-            title: 'Uber',
-            src: 'uber.png',
-            srcOver: 'hover/uber.png'
-        },
-        {
-            href: '#faketaxi',
-            title: 'Fake Taxi',
-            src: 'fake-taxi.png',
-            srcOver: 'hover/fake-taxi.png'
         }
     ]
 }

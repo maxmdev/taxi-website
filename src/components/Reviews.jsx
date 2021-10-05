@@ -15,7 +15,11 @@ export const Reviews = ({props = defaultProps}) => {
             heading={props.heading}
             description={props.description}
             id={props.id}
-            content={props.content}
+            content={
+                <div className='reviews-content'>
+                    <div className='reviews-content__border'/>
+                </div>
+            }
         />
     )
 }

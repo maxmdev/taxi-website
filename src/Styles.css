@@ -125,10 +125,8 @@ h1 {
 
 /* Section Partnership */
 .partnership {
-  margin: 0 0 40px;
   display: flex;
   flex-direction: column;
-  justify-items: center;
   align-content: center;
   align-items: center;
 }
@@ -142,7 +140,7 @@ h1 {
 .partnership p {
   margin-top: 4px;
   color: #595c65;
-  font-size: 15px;
+  font-size: 16px;
 }
 
 .partnership-content {
@@ -218,14 +216,16 @@ h1 {
 }
 
 .partners h2 {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: lighter;
+  margin-bottom: 0;
   color: #e9ecf4;
 }
 
 .partners p {
   color: #60636f;
-  font-size: 15px;
+  font-size: 16px;
+  margin: 8px 0;
   font-weight: lighter;
 }
 
@@ -233,4 +233,33 @@ h1 {
 .item-image {
   max-width: 120px;
   vertical-align: middle;
+}
+
+/* Section Reviews */
+.reviews {
+  margin: 80px auto;
+}
+
+.reviews h2 {
+  text-align: center;
+  color: #21252D;
+  margin: 0;
+}
+
+.reviews p {
+  text-align: center;
+  color: #595c65;
+  margin: 8px 0;
+}
+
+.reviews-content {
+  margin: 0 auto;
+}
+
+.reviews-content__border {
+  margin: 40px auto;
+  padding: 0;
+  max-width: 50px;
+  border-bottom: 10px solid #ff9933;
+  opacity: 0.5;
 }
