@@ -4,6 +4,7 @@ const defaultProps = {
     classname: 'partnership',
     heading: 'Profitable Cooperation',
     description: 'Why drivers choose us',
+    id: 'partnership',
     blocks: [
         {
             key: 'start',
@@ -34,6 +35,7 @@ export const Partnership = ({props = defaultProps}) => {
             className={props.classname}
             heading={props.heading}
             description={props.description}
+            id={props.id}
             content = {
                 <div className="partnership-content">
                     {

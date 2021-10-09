@@ -1,7 +1,7 @@
 const defaultProps = {
     links: [
         {
-            href: "#offer",
+            href: "#partnership",
             text: "Partnership"
         },
         {
@@ -9,7 +9,7 @@ const defaultProps = {
             text: "Partners"
         },
         {
-            href: "#feedback",
+            href: "#reviews",
             text: "Feedback"
         },
         {
