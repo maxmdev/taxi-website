@@ -9,7 +9,7 @@
 }
 
 .carousel-wrapper__inner {
-    margin: 40px 0;
+    margin: 40px 40px;
     white-space: nowrap;
     max-width: 960px;
     transition: transform 0.3s;
@@ -48,6 +48,7 @@ button.carousel-indicators__prev:hover {
 button.carousel-indicators__next {
     mask: url("./images/icons/arrow-right.svg") right no-repeat;
     background: #7a7f8a;
+    margin: 20px 0 20px 0;
 }
 
 button.carousel-indicators__next:hover {
