@@ -35,7 +35,7 @@ export const Reviews = ({props = defaultProps}) => {
                         {
                             props.content.reviews.map(review => {
                                 return (
-                                    <div className='comments-item'>
+                                    <div className='comments-item' key={'id' + review.id}>
                                         <div className='comments-item__rating'>
                                             <span className={'rating-star__' + review.rating}/>
                                         </div>
