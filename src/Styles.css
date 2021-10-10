@@ -216,7 +216,7 @@ h1 {
 /* Section Partners */
 .partners {
   margin: 40px 0 0;
-  padding: 80px 0 40px;
+  padding: 80px 0 80px;
   background: rgb(33, 37, 45);
   background: linear-gradient(90deg, rgba(33,37,45,1) 0%, rgba(42,36,47,1) 100%);
   text-align: center;
@@ -285,4 +285,30 @@ h1 {
   background-position-x: right;
   background-position-y: top;
   background-size: 30%;
+}
+
+.comments-item {
+  padding: 180px 80px;
+}
+
+.comments-item__author {
+  text-align: left;
+}
+
+.comments-item__author span {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.comments-item__author p {
+  text-align: left;
+  font-size: 14px;
+  font-style: italic;
+}
+
+.comments-item__text {
+  font-size: 15px;
+  color: #7a7f8a;
+  font-weight: lighter;
+  line-height: 24px;
 }
