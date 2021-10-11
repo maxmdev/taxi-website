@@ -315,3 +315,34 @@ h1 {
   font-weight: lighter;
   line-height: 24px;
 }
+
+.comments-item__photo {
+  display: inline;
+  position: absolute;
+  margin-left: -170px;
+  background-color: #15151b;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+.photo-round {
+  vertical-align: middle;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  filter: brightness(50%);
+}
+
+.photo-round.active {
+  filter: brightness(100%);
+}
+
+.comments-item__photo.active, .comments-item__photo:hover {
+  background: transparent;
+}
+
+.photo-round:hover {
+  cursor: pointer;
+  filter: brightness(100%);
+}

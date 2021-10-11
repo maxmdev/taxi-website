@@ -13,7 +13,7 @@ const defaultProps = {
                 author: {
                     name: 'John Doe',
                     position: 'Driver',
-                    photo: './images/drivers/1.png'
+                    photo: 'images/drivers/1.png'
                 },
                 rating: 5
             }
@@ -40,6 +40,10 @@ export const Reviews = ({props = defaultProps}) => {
                                             <span className={'rating-star__' + review.rating}/>
                                         </div>
                                         <div className='comments-item__author'>
+                                            <div className='comments-item__photo'>
+                                                <img src={require(`../${review.author.photo}`).default}
+                                                     className='photo-round' alt={review.author.name}/>
+                                            </div>
                                             <span className='author-name'>{review.author.name}</span>
                                             <p className='author-position'>{review.author.position}</p>
                                         </div>
