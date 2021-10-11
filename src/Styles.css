@@ -275,7 +275,7 @@ h1 {
 
 .reviews-content__comments {
   margin: 0 auto;
-  height: 350px;
+  height: 420px;
   max-width: 600px;
   border-radius: 16px;
   box-shadow: 0 10px 13px -5px rgba(151,143,143,0.75);
@@ -289,6 +289,13 @@ h1 {
 
 .comments-item {
   padding: 90px 50px 80px 130px;
+  display: flex;
+  flex-direction: row;
+}
+
+.comments-item__photos {
+  position: absolute;
+  margin-left: -165px;
 }
 
 .comments-item__author {
@@ -317,21 +324,19 @@ h1 {
 }
 
 .comments-item__photo {
-  display: inline;
-  position: absolute;
-  margin-left: -170px;
-  background-color: #15151b;
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
+  margin: 0 0 20px 0;
   border-radius: 50%;
 }
 
 .photo-round {
   vertical-align: middle;
-  width: 80px;
-  height: 80px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   filter: brightness(50%);
+  transition: ease 0.5s;
 }
 
 .photo-round.active {
