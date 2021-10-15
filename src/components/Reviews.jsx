@@ -1,5 +1,6 @@
 import {SectionHeader} from "./SeactionHeader";
 import {ReviewSlider} from "./ReviewSlider";
+import {RequestForm} from "./RequestForm";
 
 const defaultProps = {
     className: 'reviews',
@@ -54,6 +55,12 @@ export const Reviews = ({props = defaultProps}) => {
                     <div className='reviews-content__border'/>
                     <div className='reviews-content__comments'>
                         <ReviewSlider props={props.content}/>
+                        <div className='comments-taxi'/>
+                    </div>
+                    <div className='reviews-content__request container'>
+                        <h2>Become a Driver</h2>
+                        <p>Leave your request and become a part of our team</p>
+                        <RequestForm/>
                     </div>
                 </div>
             }

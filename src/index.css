@@ -50,9 +50,13 @@ button {
   text-transform: uppercase;
 }
 
-.button:hover {
-  background-position: right center; /* change the direction of the change here */
+button:hover {
+  background-position: right center;
   color: #fff;
   text-decoration: none;
   cursor: pointer;
+}
+
+::placeholder {
+  opacity: 1;
 }

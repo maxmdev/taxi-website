@@ -244,8 +244,9 @@ h1 {
 
 /* Section Reviews */
 .reviews {
-  background: #ffffff;
   padding:  0 0 40px 0;
+  background: url('./images/buildings.png') center #ffffff;
+  background-size: cover;
 }
 
 .reviews h2 {
@@ -285,6 +286,16 @@ h1 {
   background-position-x: right;
   background-position-y: top;
   background-size: 25%;
+  background: #ffffff;
+}
+
+.comments-taxi {
+  width: 400px;
+  height: 200px;
+  margin: -100px 50%;
+  z-index: 5;
+  background: url('./images/taxi-car.png') center no-repeat;
+  background-size: contain;
 }
 
 .comments-item {
@@ -323,6 +334,11 @@ h1 {
   line-height: 24px;
 }
 
+.comments-item__text p {
+  text-align: left;
+}
+
+
 .comments-item__photo {
   width: 70px;
   height: 70px;
@@ -350,4 +366,67 @@ h1 {
 .photo-round:hover {
   cursor: pointer;
   filter: brightness(100%);
+}
+
+.reviews-content__request {
+  margin: 40px auto;
+  text-align: center;
+}
+
+.reviews-content__request p {
+  font-size: 15px;
+}
+
+.request-form {
+  padding: 0 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 40px auto;
+  background-color: #ffffff;
+  border-radius: 60px;
+  box-shadow: 0 10px 13px -7px #7a7f8a, 5px 5px 15px 5px rgba(0,0,0,0);
+}
+
+
+.request-form input {
+  background: transparent;
+  padding-left: 40px;
+  color: #7a7f8a;
+  font-size: 15px;
+  border: 0;
+}
+
+.request-form input:focus {
+  outline: none;
+}
+
+.request-form button {
+  margin: 8px 0;
+}
+
+input.request-form__name {
+  background: url('./images/icons/user-icon.svg') left no-repeat;
+  background-size: 30px;
+}
+
+input.request-form__phone {
+  background: url('./images/icons/phone.svg') left no-repeat;
+  background-size: 30px;
+}
+
+.request-form__phone:focus, .request-form__name:focus {
+  background: linear-gradient(to right, #FF8008 0%, #FFC837  51%, #FF8008  100%);
+  background-size: 200% auto;
+  color: #ffffff;
+}
+
+.request-form__name:focus {
+  border-radius: 40px;
+}
+
+p.request-disclaimer {
+  margin: 80px 0 0 0;
+  font-size: 11px;
+  color: #7a7f8a;
 }

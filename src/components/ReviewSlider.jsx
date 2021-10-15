@@ -48,7 +48,7 @@ export const ReviewSlider = ({props = defaultProps}) => {
                     <p className='author-position'>{ props.reviews[active].author.position }</p>
                 </div>
                 <div className='comments-item__text'>
-                    { props.reviews[active].text }
+                    <p>{ props.reviews[active].text }</p>
                 </div>
             </div>
         </div>
