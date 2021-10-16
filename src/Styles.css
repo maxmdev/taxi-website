@@ -421,6 +421,10 @@ input.request-form__phone {
   color: #ffffff;
 }
 
+input.request-form__phone.invalid {
+
+}
+
 .request-form__name:focus {
   border-radius: 40px;
 }
