@@ -408,6 +408,7 @@ h1 {
 input.request-form__name {
   background: url('./images/icons/user-icon.svg') left no-repeat;
   background-size: 30px;
+  border-radius: 40px;
 }
 
 input.request-form__phone {
@@ -415,22 +416,27 @@ input.request-form__phone {
   background-size: 30px;
 }
 
-.request-form__phone:focus, .request-form__name:focus {
-  background: linear-gradient(to right, #FF8008 0%, #FFC837  51%, #FF8008  100%);
+.request-form__phone.invalid, .request-form__name.invalid {
+  background-image: linear-gradient(to right, #f00000 0%, #f62b3f  51%, #f00000 100%);
   background-size: 200% auto;
   color: #ffffff;
-}
-
-input.request-form__phone.invalid {
-
-}
-
-.request-form__name:focus {
-  border-radius: 40px;
+  transition: 0.5s;
+  animation-duration: 2s;
+  animation-name: requireValid;
 }
 
 p.request-disclaimer {
   margin: 80px 0 0 0;
   font-size: 11px;
   color: #7a7f8a;
+}
+
+@keyframes requireValid {
+  from {
+    background-position: center;
+  }
+
+  to {
+    background-position: right center;
+  }
 }

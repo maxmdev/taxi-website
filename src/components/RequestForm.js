@@ -10,18 +10,39 @@ const defaultProps = {
         ' accordance with the GDPR.'
 }
 export const RequestForm = ({props = defaultProps}) => {
+    const minNameLength = 2;
+    const minPhoneLength = 11;
+
     const [contact, setContact] = useState(() => {
         return {
             name: {
               value: '',
               valid: function () {
-                  return /^[a-zA-Z ]+$/.test(this.value) && this.value.length >= 2
+                  return /^[a-zA-Z ]+$/.test(this.value) && this.value.length >= minNameLength;
+              },
+              toggleClass: function (event) {
+                  if(!this.valid()) {
+                          event.target.classList.add('invalid');
+                  }
+
+                  if(this.valid() || !this.value) {
+                      event.target.classList.remove('invalid')
+                  }
               }
             },
             phone: {
               value: '',
               valid: function () {
-                  return /^(?:[+\d].*\d|\d)$/.test(this.value) && this.value.length >= 9
+                  return /^(?:[+\d].*\d|\d)$/.test(this.value) && this.value.length >= minPhoneLength;
+              },
+              toggleClass: function (event) {
+                  if(!this.valid()) {
+                      event.target.classList.add('invalid');
+                  }
+
+                  if(this.valid() || !this.value) {
+                      event.target.classList.remove('invalid')
+                  }
               }
             },
             valid: function () {
@@ -60,12 +81,24 @@ export const RequestForm = ({props = defaultProps}) => {
     return (
         <>
             <form className='request-form' onSubmit={submit}>
-                <input type='text' className='request-form__name' placeholder={props.placeholder.name}
+                <input type='text' className='request-form__name'
+                       placeholder={props.placeholder.name}
                        value={contact.name.value}
-                        onChange={event => setContact({...contact, name: {...contact.name, value: event.target.value}})}/>
-                <input type='text' className='request-form__phone invalid' placeholder={props.placeholder.phone}
+                       onBlur={event => contact.name.toggleClass(event)}
+                       onChange={event => setContact(
+                           {...contact, name:
+                                   {...contact.name,
+                                       value: event.target.value}
+                           })} required/>
+                <input type='text' className='request-form__phone'
+                       placeholder={props.placeholder.phone}
                        value={contact.phone.value}
-                        onChange={event => setContact({...contact, phone: {...contact.phone, value: event.target.value}})}/>
+                       onBlur={event => contact.phone.toggleClass(event)}
+                       onChange={event => setContact(
+                           {...contact, phone:
+                                   {...contact.phone,
+                                       value: event.target.value}
+                           })} required/>
                 <button type='submit'>{props.buttonText}</button>
             </form>
             <p className='request-disclaimer'>{props.disclaimer}</p>
