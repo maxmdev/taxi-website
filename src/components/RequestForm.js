@@ -1,4 +1,5 @@
-import {useRef, useState} from "react";
+import { useState } from "react";
+import { Modal } from "./Modal/Modal";
 
 const defaultProps = {
     placeholder: {
@@ -50,6 +51,7 @@ export const RequestForm = ({props = defaultProps}) => {
             }
         };
     });
+    const [modal, setModal] = useState(false);
 
     const submit = event => {
         event.preventDefault();
@@ -75,6 +77,7 @@ export const RequestForm = ({props = defaultProps}) => {
                         value: ''
                     }
                 }))
+                .then(() => setModal(true))
         }
     }
 
@@ -102,6 +105,13 @@ export const RequestForm = ({props = defaultProps}) => {
                 <button type='submit'>{props.buttonText}</button>
             </form>
             <p className='request-disclaimer'>{props.disclaimer}</p>
+
+            <Modal
+                show={modal}
+                header={'Request a Call'}
+                onClose={() => setModal(false)}
+                content={'Thank you, John! Your request has been received!'}
+            />
         </>
     )
 }
