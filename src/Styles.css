@@ -282,11 +282,10 @@ h1 {
   box-shadow: 0 10px 13px -5px rgba(151,143,143,0.75);
   -webkit-box-shadow: 0 10px 13px -5px rgba(151,143,143,0.75);
   -moz-box-shadow: 0 10px 13px -5px rgba(151,143,143,0.75);
-  background: url('./images/icons/quote.svg') no-repeat;
+  background: url('./images/icons/quote.svg') no-repeat #ffffff;
   background-position-x: right;
   background-position-y: top;
   background-size: 25%;
-  background: #ffffff;
 }
 
 .comments-taxi {
