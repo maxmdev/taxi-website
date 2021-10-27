@@ -1,4 +1,6 @@
 import {SectionHeader} from "./SeactionHeader";
+import useWindowSize from "./useWindowSize/useWindowSize";
+
 import '../Workflow.css';
 
 const defaultProps = {
@@ -26,6 +28,9 @@ const defaultProps = {
 }
 
 export const Workflow = ({props = defaultProps}) => {
+
+    const { width } = useWindowSize();
+
     return (
         <SectionHeader
             className = {props.className}

@@ -1,14 +1,15 @@
 import React, {useState} from "react";
 
 export default function useWindowSize() {
-    if (typeof window !== 'undefined') {
-        return {
-            width: 1200,
-            height: 800
-        }
-    }
+    const defaultWidth = 1200;
+    const defaultHeight = 800;
 
-    const [windowSize, setWindowSize] = useState();
+    const [windowSize, setWindowSize] = useState(() => {
+        return {
+            width: window.innerWidth || defaultWidth,
+            height: window.innerHeight || defaultHeight
+        }
+    });
 
     function updateWindowSize() {
         setWindowSize({
