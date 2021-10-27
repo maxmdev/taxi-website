@@ -28,6 +28,7 @@ const defaultProps = {
 }
 
 export const Workflow = ({props = defaultProps}) => {
+    const mobileWidth = 610;
 
     const { width } = useWindowSize();
 
@@ -44,9 +45,10 @@ export const Workflow = ({props = defaultProps}) => {
                         props.content.map((step, index) => {
                             return (
                                 <div className='workflow-content__item' key={'item' + index}>
-                                    <img src={require(`../images/icons/${step.image}`).default}
+                                    { width > mobileWidth && (<img src={require(`../images/icons/${step.image}`).default}
                                          alt={step.header + ' image'}
-                                         className='workflow-content__image'/>
+                                         className='workflow-content__image'/>)
+                                    }
                                     <span className='workflow-content__circle'>
                                             <span className='workflow-content__circle-inner'>
                                                 <span className='workflow-content__circle-center'/>

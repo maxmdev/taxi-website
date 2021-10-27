@@ -123,6 +123,43 @@
     margin-bottom: 0;
 }
 
-@media (max-width: 460px) {
+@media (max-width: 600px) {
+    .workflow-content__divider {
+        margin-top: 30px;
+        margin-left: 0;
+        z-index: 1;
+        height: 540px;
+    }
 
+    .workflow-content {
+        max-width: 320px;
+        margin: 40px auto;
+        position: relative;
+    }
+
+    .workflow-content__circle {
+        position: static;
+        margin-left: 1px;
+        margin-bottom: 50px;
+    }
+
+    .workflow-content__item {
+        display: flex;
+        margin: 50px auto;
+        position: relative;
+        flex-direction: column;
+        z-index: 2;
+    }
+
+    .workflow-content__item:nth-child(2n) {
+        flex-direction: column;
+    }
+
+    .workflow-content__item:nth-child(3n) .workflow-content__circle {
+        margin-left: 1px;
+    }
+
+    .workflow-content__item:nth-child(3n) .workflow-content__description {
+        text-align: left;
+    }
 }
