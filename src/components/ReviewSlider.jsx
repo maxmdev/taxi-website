@@ -30,8 +30,8 @@ export const ReviewSlider = ({props = defaultProps}) => {
                             <div className={'comments-item__photo' + addActiveClass(active, review.id)} key={ review.id }>
                                 <img src={require(`../${review.author.photo}`).default}
                                      className={'photo-round' + addActiveClass(active, review.id)}
-                                     onClick={ () => changeActive(review.id) }
-                                     alt={ review.author.name }/>
+                                     onClick={() => changeActive(review.id)}
+                                     alt={review.author.name}/>
                             </div>
                         )
                     })
@@ -44,11 +44,11 @@ export const ReviewSlider = ({props = defaultProps}) => {
                 </div>
                 <div className='comments-item__author'>
 
-                    <span className='author-name'>{ props.reviews[active].author.name }</span>
-                    <p className='author-position'>{ props.reviews[active].author.position }</p>
+                    <span className='author-name'>{props.reviews[active].author.name}</span>
+                    <p className='author-position'>{props.reviews[active].author.position}</p>
                 </div>
                 <div className='comments-item__text'>
-                    <p>{ props.reviews[active].text }</p>
+                    <p>{props.reviews[active].text}</p>
                 </div>
             </div>
         </div>

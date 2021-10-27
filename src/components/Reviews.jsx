@@ -1,6 +1,8 @@
 import {SectionHeader} from "./SeactionHeader";
 import {ReviewSlider} from "./ReviewSlider";
 import {RequestForm} from "./RequestForm";
+import useWindowSize from "./useWindowSize/useWindowSize";
+import '../Reviews.css';
 
 const defaultProps = {
     className: 'reviews',
@@ -44,6 +46,9 @@ const defaultProps = {
 }
 
 export const Reviews = ({props = defaultProps}) => {
+    const { width } = useWindowSize();
+    const mobileWidth = 500;
+
     return (
         <SectionHeader
             className={props.className}
@@ -55,7 +60,7 @@ export const Reviews = ({props = defaultProps}) => {
                     <div className='reviews-content__border'/>
                     <div className='reviews-content__comments'>
                         <ReviewSlider props={props.content}/>
-                        <div className='comments-taxi'/>
+                        { width > mobileWidth && (<div className='comments-taxi'/>) }
                     </div>
                     <div className='reviews-content__request container'>
                         <h2>Become a Driver</h2>
