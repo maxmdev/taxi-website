@@ -13,7 +13,7 @@ const defaultProps = {
             text: "Feedback"
         },
         {
-            href: "#start",
+            href: "#workflow",
             text: "How to Start"
         },
         {
