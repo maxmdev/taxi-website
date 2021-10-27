@@ -1,4 +1,5 @@
 import {SectionHeader} from "./SeactionHeader";
+import '../Partnership.css';
 
 const defaultProps = {
     classname: 'partnership',

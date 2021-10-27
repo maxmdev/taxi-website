@@ -1,0 +1,88 @@
+.partnership {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+
+.partnership h2 {
+    color: #21252D;
+    margin-top: 2px;
+    margin-bottom: 4px;
+}
+
+.partnership p {
+    margin-top: 4px;
+    color: #595c65;
+    font-size: 16px;
+}
+
+.partnership-content {
+    justify-items: center;
+    margin: 0 auto;
+    max-width: 768px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.partnership-content__info {
+    margin: 20px 20px;
+    background: #ffffff;
+    border-radius: 16px;
+    text-align: center;
+}
+
+.partnership-content__info h4 {
+    padding: 10px 0 0;
+}
+
+.info-image {
+    margin: 0 auto;
+    height: 80px;
+    width: 80px;
+    border-radius: 16px;
+    box-shadow: 0 10px 13px -5px rgba(151,143,143,0.75);
+    -webkit-box-shadow: 0 10px 13px -5px rgba(151,143,143,0.75);
+    -moz-box-shadow: 0 10px 13px -5px rgba(151,143,143,0.75);
+}
+
+.info-image__start {
+    background: url('./images/icons/rocket.svg') center no-repeat;
+    background-size: 80%;
+}
+
+.info-image__payments {
+    background: url('./images/icons/money.svg') center no-repeat;
+    background-size: 80%;
+}
+
+.info-image__schedule {
+    background: url('./images/icons/schedule.svg') center no-repeat;
+    background-size: 80%;
+}
+
+.info-image__support {
+    background: url('./images/icons/support.svg') center no-repeat;
+    background-size: 80%;
+}
+
+.info-border {
+    margin: 0 auto;
+    padding: 0;
+    max-width: 40px;
+    border-bottom: 4px solid #ff9933;
+}
+
+.partnership-content__info p {
+    padding: 10px 30px;
+    line-height: 24px;
+    font-size: 14px;
+    color: #666666;
+}
+
+@media (max-width: 600px) {
+    .partnership-content {
+        padding: 0 30px;
+        grid-template-columns: 1fr;
+    }
+}
