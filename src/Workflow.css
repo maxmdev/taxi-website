@@ -101,7 +101,7 @@
 }
 
 .workflow-content__item:nth-child(3n) .workflow-content__circle {
-    margin-left: 283px;
+    margin-right: 287px;
 }
 
 .workflow-content__item:nth-child(3) .workflow-content__circle-inner {
@@ -157,6 +157,7 @@
 
     .workflow-content__item:nth-child(3n) .workflow-content__circle {
         margin-left: 1px;
+        margin-right: 0;
     }
 
     .workflow-content__item:nth-child(3n) .workflow-content__description {
