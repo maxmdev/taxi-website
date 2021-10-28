@@ -16,9 +16,9 @@
 }
 
 .modal-content {
-    margin: 15% auto;
+    margin: 20% auto;
     background-color: #ffffff;
-    max-width: 600px;
+    max-width: 560px;
     border-radius: 20px;
 }
 
@@ -30,10 +30,10 @@
     border-bottom: 2px solid #F6F6F6;
 }
 
-.modal-content__header h2 {
+.modal-content__header h2.modal-header_title {
     padding: 0;
     margin: auto 20px;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .modal-content__header button {
@@ -45,4 +45,10 @@
 
 .modal-content__body {
     padding: 60px;
+}
+
+@media (max-width: 600px) {
+    .modal-content {
+        max-width: 386px;
+    }
 }
