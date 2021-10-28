@@ -1,6 +1,7 @@
 import { SectionHeader } from "./SeactionHeader";
 import { Partner } from "./Partner";
 import Carousel, { CarouselItem } from "./Carousel";
+import '../Partners.css';
 
 const defaultProps = {
     className: 'partners',
