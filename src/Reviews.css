@@ -243,6 +243,7 @@ p.request-disclaimer {
     .request-form input {
         height: 30px;
         margin: 20px auto;
+        width: 80%;
     }
 
     .request-form button {

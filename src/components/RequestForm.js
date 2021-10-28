@@ -3,7 +3,7 @@ import { Modal } from "./Modal/Modal";
 
 const defaultProps = {
     placeholder: {
-        name: 'Your Name (ex. John Doe)',
+        name: 'Your Name (ex. John)',
         phone: 'Your Phone Number'
     },
     buttonText: 'Call me Back',
