@@ -1,0 +1,86 @@
+.header-content__heading h1, .header-content__heading p {
+    color: #000000;
+}
+
+.header-background {
+    height: calc(800px + 2vh);
+    width: calc(1200px + 2vh);
+    margin-top: -386px;
+    margin-left: -768px;
+    position: absolute;
+    z-index: -2;
+    border-top-left-radius: 100px;
+    background: #ffcc00;
+    transform: rotate(-200deg);
+}
+
+.header-content {
+    margin: 0 auto;
+    padding: 100px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.header-content p {
+    margin-bottom: 20px;
+}
+
+.header-content__right {
+    border-radius: 80px;
+    margin-left: 0;
+    padding: 0;
+    background: url('./images/bm-car.png') center no-repeat;
+    background-size: 90%;
+    width: 100%;
+}
+
+.heading-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+}
+
+.header-content__heading button {
+    background-image: linear-gradient(to right, rgba(33,37,45,1) 0%, rgba(42,36,47,1)  51%, rgba(33,37,45,1)  100%);
+    border-radius: 4px;
+}
+
+.header-content__heading button:hover {
+    opacity: 0.9;
+    background-position: right center;
+}
+
+button.heading-apply {
+    background-color: #ffffff;
+    color: #15151b;
+    background-image: none;
+    font-weight: bolder;
+}
+
+@media (max-width: 1024px) {
+    .header-content {
+        padding: 40px 0;
+        margin: 0 40px;
+    }
+
+    .header-content__right {
+        margin-left: 0;
+        padding: 10px;
+    }
+
+    .header-content button {
+        padding: 10px 14px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 600px) {
+    .header-content {
+        grid-template-columns: 1fr;
+    }
+
+    .header {
+        margin-bottom: 80px;
+    }
+}

@@ -8,10 +8,6 @@ body {
   background: #F6F6F6;
 }
 
-header {
-  background-color: #333333;
-}
-
 nav, nav a {
   display: flex;
   flex-direction: row;

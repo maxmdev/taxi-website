@@ -109,19 +109,14 @@ h1 {
 .phone-link:hover {
   cursor: pointer;
   opacity: 0.8;
-
 }
 
 .phone-link span {
   display: inline-block;
-  background: #FFC837;
   mask-image: url("./images/incoming-call.svg");
   mask-size: contain;
   mask-position: center;
   vertical-align: middle;
-  width: 30px;
-  height: 30px;
-  margin-right: 10px;
 }
 
 .city_background {

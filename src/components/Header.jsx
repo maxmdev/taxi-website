@@ -1,47 +1,52 @@
 import {Navigation} from "./Navigation";
 import {Button} from "./Button";
-import {PhoneButton} from "./PhoneButton";
+import useWindowSize from "./useWindowSize/useWindowSize";
+
+import '../Header.css';
 
 const defaultProps = {
     headerPhoneNumber: "(222) 511-200",
-    headerHeading: "Get started in just a few hours",
-    headerDescription: "Become a driver of the reliable taxi company in your city and earn money today",
+    headerHeading: "Start a Career in a Reliable Taxi Company of Your City",
+    headerDescription: "Receive a car within a few hours and earn money from today",
     applyButtonText: "Contact us",
     requestButtonText: "Request a call",
     headerLogoText: "Top Taxi"
 }
 
 export const Header = ({props = defaultProps}) => {
+    const {width} = useWindowSize();
+    const mobileWidth = 500;
+
     return (
         <>
-        <div className='header-nav'>
-            <div className='header-container'>
-                <div className='header-container__logo'>
-                    <div className='logo-text'>
-                        <a href="#header">{props.headerLogoText}</a>
+            <div className='header-nav'>
+                <div className='header-container'>
+                    <div className='header-container__logo'>
+                        <div className='logo-text'>
+                            <a href="#header">{props.headerLogoText}</a>
+                        </div>
                     </div>
+                    <Navigation/>
+                    <span className='header-container__phone'>{props.headerPhoneNumber}</span>
                 </div>
-                <Navigation/>
-                <span className='header-container__phone'>{props.headerPhoneNumber}</span>
             </div>
-        </div>
-        <header id='header' className='city_background'>
-            <div className='header-content'>
-                <div className='header-content__right'>
+
+            <header id='header' className='header'>
+                <div className='header-content'>
+                    <div className='header-background'/>
                     <div className='header-content__heading'>
-                        <h1>{props.headerHeading}</h1>
-                        <p>{props.headerDescription}</p>
+                        <div className='heading-content'>
+                            <h1>{props.headerHeading}</h1>
+                            <p>{props.headerDescription}</p>
+                        </div>
+                        <div className='heading-buttons'>
+                            <Button text={props.applyButtonText}/>
+                            <Button text={props.requestButtonText} classname='heading-apply'/>
+                        </div>
                     </div>
-                    <div className='header-content__contact'>
-                        <Button text={props.applyButtonText} />
-                        <PhoneButton href='#' text={props.requestButtonText} />
-                    </div>
+                    {width > mobileWidth && (<div className='header-content__right'/>)}
                 </div>
-            </div>
-            <div className='header-wave'>
-                <div className='header-taxi'/>
-            </div>
-        </header>
+            </header>
         </>
     )
 }
