@@ -1,3 +1,6 @@
+import useWindowSize from "./useWindowSize/useWindowSize";
+import {HamburgerNav} from "./HamburgerNav";
+
 const defaultProps = {
     links: [
         {
@@ -23,10 +26,23 @@ const defaultProps = {
     ]}
 
 export const Navigation = ({props = defaultProps}) => {
+    const {width} = useWindowSize();
+    const mobileWidth = 500;
+    const maxTabletWidth = 846;
+    const tabletWidth = width > mobileWidth && width < maxTabletWidth;
+
     return (
         <nav className="header-container__menu">
             {
-                props.links.map(link => <li key={link.href.substr(1)}><a href={link.href}>{link.text}</a></li> )
+                !tabletWidth && (
+                    props.links.map(link => <li key={link.href.substr(1)}>
+                        <a href={link.href}>{link.text}</a>
+                    </li>)
+                )
+            }
+
+            {
+                tabletWidth && (<HamburgerNav links = {props.links}/>)
             }
         </nav>
     )

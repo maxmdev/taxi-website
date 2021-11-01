@@ -26,14 +26,14 @@ export const Header = ({props = defaultProps}) => {
                             <a href="#header">{props.headerLogoText}</a>
                         </div>
                     </div>
-                    <Navigation/>
+                    { width > mobileWidth && (<Navigation/>) }
                     <span className='header-container__phone'>{props.headerPhoneNumber}</span>
                 </div>
             </div>
 
             <header id='header' className='header'>
                 <div className='header-content'>
-                    <div className='header-background'/>
+                    { width > mobileWidth && (<div className='header-background'/>) }
                     <div className='header-content__heading'>
                         <div className='heading-content'>
                             <h1>{props.headerHeading}</h1>
@@ -44,7 +44,7 @@ export const Header = ({props = defaultProps}) => {
                             <Button text={props.requestButtonText} classname='heading-apply'/>
                         </div>
                     </div>
-                    {width > mobileWidth && (<div className='header-content__right'/>)}
+                    { width > mobileWidth && (<div className='header-content__right'/>) }
                 </div>
             </header>
         </>
