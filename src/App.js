@@ -9,15 +9,15 @@ import {Workflow} from "./components/Workflow";
 function App() {
     const [landingPageData, setLandingPageData] = useState({});
 
-  return (
-      <>
-          <Header data={ Header }/>
-          <Partnership data={ Partnership }/>
-          <Partners data={ Partners }/>
-          <Reviews data={ Reviews }/>
-          <Workflow data={ Workflow } />
-      </>
-  )
+    return (
+        <>
+            <Header data={ Header }/>
+            <Partnership data={ Partnership }/>
+            <Partners data={ Partners }/>
+            <Reviews data={ Reviews }/>
+            <Workflow data={ Workflow } />
+        </>
+    )
 }
 
 export default App;
