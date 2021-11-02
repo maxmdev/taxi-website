@@ -2,6 +2,7 @@ import {Navigation} from "./Navigation";
 import {Button} from "./Button";
 import {Logo} from "./Logo";
 import useWindowSize from "./useWindowSize/useWindowSize";
+import copyToClipboard from "../functions/copyToClipboard";
 
 import '../Header.css';
 
@@ -24,7 +25,8 @@ export const Header = ({props = defaultProps}) => {
                 <div className='header-container'>
                     <Logo/>
                     { width > mobileWidth && (<Navigation/>) }
-                    <span className='header-container__phone'>{props.headerPhoneNumber}</span>
+                    <span className='header-container__phone'
+                          onClick={copyToClipboard}>{props.headerPhoneNumber}</span>
                 </div>
             </div>
 
