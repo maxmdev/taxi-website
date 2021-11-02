@@ -1,8 +1,14 @@
 export const Logo = (props) => {
+    const scrollTop = () => {
+        window.scrollTo({top: 0, behavior: 'smooth'});
+
+        return true
+    }
+
     return (
-        <div className='header-container__logo'>
+        <div className='header-container__logo' onClick={scrollTop}>
             <div className='logo-text'>
-                <a href="#header">{props.text}</a>
+                {props.text}
             </div>
         </div>
     )
