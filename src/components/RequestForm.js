@@ -51,7 +51,10 @@ export const RequestForm = ({props = defaultProps}) => {
             }
         };
     });
-    const [modal, setModal] = useState(false);
+
+    const [modal, setModal] = useState(() => {
+        return false
+    });
 
     const submit = event => {
         event.preventDefault();

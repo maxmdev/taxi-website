@@ -2,7 +2,6 @@ import {Logo} from "./Logo";
 import {Navigation} from "./Navigation";
 import '../Footer.css';
 import useWindowSize from "./useWindowSize/useWindowSize";
-import copyToClipboard from "../functions/copyToClipboard";
 
 export const Footer = (props) => {
     const width = useWindowSize();
@@ -14,7 +13,7 @@ export const Footer = (props) => {
                 <Logo/>
                 { showNavi && (<Navigation/>) }
                 <div className='footer-content__contacts'>
-                    <div className='footer-content__phone' onClick={copyToClipboard}>{props.phone}</div>
+                    <div className='footer-content__phone'>{props.phone}</div>
                     <div className='footer-content__about'>
                         &#169; Top Taxi S.R.L.
                     </div>

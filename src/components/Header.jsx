@@ -3,21 +3,26 @@ import {Button} from "./Button";
 import {Logo} from "./Logo";
 import useWindowSize from "./useWindowSize/useWindowSize";
 import copyToClipboard from "../functions/copyToClipboard";
+import {Notification} from "./Notification/Notification";
+import {useState} from "react";
 
 import '../Header.css';
 
-const defaultProps = {
-    headerPhoneNumber: "(222) 511-200",
-    headerHeading: "Start a Career in a Reliable Taxi Company of Your City",
-    headerDescription: "Receive a car within a few hours and earn money from today",
-    applyButtonText: "Contact us",
-    requestButtonText: "Request a call",
-    headerLogoText: "Top Taxi"
-}
-
-export const Header = ({props = defaultProps}) => {
+export const Header = (props) => {
     const {width} = useWindowSize();
     const mobileWidth = 500;
+
+    const [showNotification, setShowNotification] = useState(() => {
+        return false
+    })
+
+    function copyData(event) {
+        setTimeout(() => {
+            setShowNotification(false);
+        }, 3000)
+
+        return setShowNotification(copyToClipboard(event));
+    }
 
     return (
         <>
@@ -26,8 +31,12 @@ export const Header = ({props = defaultProps}) => {
                     <Logo/>
                     { width > mobileWidth && (<Navigation/>) }
                     <span className='header-container__phone'
-                          onClick={copyToClipboard}>{props.headerPhoneNumber}</span>
+                    onClick={event => copyData(event)}>{props.headerPhoneNumber}</span>
                 </div>
+                <Notification
+                    show={showNotification}
+                    hide={() => setShowNotification(false)}
+                />
             </div>
 
             <header id='header' className='header'>
@@ -48,4 +57,13 @@ export const Header = ({props = defaultProps}) => {
             </header>
         </>
     )
+}
+
+Header.defaultProps = {
+    headerPhoneNumber: "(222) 511-200",
+    headerHeading: "Start a Career in a Reliable Taxi Company of Your City",
+    headerDescription: "Receive a car within a few hours and earn money from today",
+    applyButtonText: "Contact us",
+    requestButtonText: "Request a call",
+    headerLogoText: "Top Taxi"
 }

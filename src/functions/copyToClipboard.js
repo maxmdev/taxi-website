@@ -8,7 +8,7 @@ const copyToClipboard = function (event) {
     const copiedValue = document.execCommand('copy');
     document.body.removeChild(inputTextArea);
 
-    return copiedValue;
+    return copiedValue
 }
 
 export default copyToClipboard;
