@@ -5,6 +5,7 @@ import {Partnership} from './components/Partnership';
 import {Partners} from "./components/Partners";
 import {Reviews} from "./components/Reviews";
 import {Workflow} from "./components/Workflow";
+import {Footer} from "./components/Footer";
 
 function App() {
     const [landingPageData, setLandingPageData] = useState({});
@@ -15,7 +16,8 @@ function App() {
             <Partnership data={ Partnership }/>
             <Partners data={ Partners }/>
             <Reviews data={ Reviews }/>
-            <Workflow data={ Workflow } />
+            <Workflow data={ Workflow }/>
+            <Footer data={ Footer }/>
         </>
     )
 }

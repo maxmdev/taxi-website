@@ -1,5 +1,6 @@
 import {Navigation} from "./Navigation";
 import {Button} from "./Button";
+import {Logo} from "./Logo";
 import useWindowSize from "./useWindowSize/useWindowSize";
 
 import '../Header.css';
@@ -21,11 +22,7 @@ export const Header = ({props = defaultProps}) => {
         <>
             <div className='header-nav'>
                 <div className='header-container'>
-                    <div className='header-container__logo'>
-                        <div className='logo-text'>
-                            <a href="#header">{props.headerLogoText}</a>
-                        </div>
-                    </div>
+                    <Logo/>
                     { width > mobileWidth && (<Navigation/>) }
                     <span className='header-container__phone'>{props.headerPhoneNumber}</span>
                 </div>

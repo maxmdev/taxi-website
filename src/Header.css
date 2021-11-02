@@ -58,10 +58,10 @@ h1 {
 }
 
 .logo-text {
-    margin-left: 24px;
     margin-top: 20px;
     font-weight: bold;
     text-transform: uppercase;
+    text-align: center;
 }
 
 .logo-text a {

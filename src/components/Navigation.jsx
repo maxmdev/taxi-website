@@ -1,31 +1,7 @@
 import useWindowSize from "./useWindowSize/useWindowSize";
 import {HamburgerNav} from "./HamburgerNav";
 
-const defaultProps = {
-    links: [
-        {
-            href: "#partnership",
-            text: "Partnership"
-        },
-        {
-            href: "#partners",
-            text: "Partners"
-        },
-        {
-            href: "#reviews",
-            text: "Feedback"
-        },
-        {
-            href: "#workflow",
-            text: "How to Start"
-        },
-        {
-            href: "#contact",
-            text: "Contacts"
-        }
-    ]}
-
-export const Navigation = ({props = defaultProps}) => {
+export const Navigation = (props) => {
     const {width} = useWindowSize();
     const mobileWidth = 500;
     const maxTabletWidth = 846;
@@ -47,3 +23,28 @@ export const Navigation = ({props = defaultProps}) => {
         </nav>
     )
 }
+
+Navigation.defaultProps = {
+    links: [
+        {
+            href: "#partnership",
+            text: "Partnership"
+        },
+        {
+            href: "#partners",
+            text: "Partners"
+        },
+        {
+            href: "#reviews",
+            text: "Feedback"
+        },
+        {
+            href: "#workflow",
+            text: "How to Start"
+        },
+        {
+            href: "#contact",
+            text: "Contacts"
+        }
+        ]
+    }
