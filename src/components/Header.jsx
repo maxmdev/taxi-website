@@ -21,7 +21,7 @@ export const Header = (props) => {
         if(!showNotification) {
             setTimeout(() => {
                 setShowNotification(false);
-            }, 3000)
+            }, 5000)
         }
 
         return setShowNotification(copyToClipboard(event));
