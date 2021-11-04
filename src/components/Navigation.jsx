@@ -4,7 +4,7 @@ import {HamburgerNav} from "./HamburgerNav";
 export const Navigation = (props) => {
     const {width} = useWindowSize();
     const mobileWidth = 500;
-    const maxTabletWidth = 846;
+    const maxTabletWidth = 896;
     const tabletWidth = width > mobileWidth && width < maxTabletWidth;
 
     return (

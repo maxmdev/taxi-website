@@ -6,7 +6,7 @@ import '../Reviews.css';
 
 export const Reviews = (props) => {
     const { width } = useWindowSize();
-    const mobileWidth = 500;
+    const hideTaxiImage = 800;
 
     return (
         <SectionHeader
@@ -19,7 +19,7 @@ export const Reviews = (props) => {
                     <div className='reviews-content__border'/>
                     <div className='reviews-content__comments'>
                         <ReviewSlider props={props.content}/>
-                        { width > mobileWidth && (<div className='comments-taxi'/>) }
+                        { width > hideTaxiImage && (<div className='comments-taxi'/>) }
                     </div>
                     <div className='reviews-content__request container'>
                         <h2>Become a Driver</h2>

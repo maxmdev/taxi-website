@@ -11,6 +11,7 @@ import '../Header.css';
 export const Header = (props) => {
     const {width} = useWindowSize();
     const mobileWidth = 500;
+    const hideTaxiImage = 820;
 
     const [showNotification, setShowNotification] = useState(() => {
         return false
@@ -54,7 +55,7 @@ export const Header = (props) => {
                             <Button text={props.requestButtonText} classname='heading-apply'/>
                         </div>
                     </div>
-                    { width > mobileWidth && (<div className='header-content__right'/>) }
+                    { width > hideTaxiImage && (<div className='header-content__right'/>) }
                 </div>
             </header>
         </>
