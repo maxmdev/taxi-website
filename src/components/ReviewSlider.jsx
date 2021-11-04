@@ -1,10 +1,6 @@
 import React, { useState } from "react";
-const defaultProps = {
-    content: {
-        reviews: []
-    }
-}
-export const ReviewSlider = ({props = defaultProps}) => {
+
+export const ReviewSlider = ({props}) => {
     const [active, setActive] = useState(() => {
         return props.reviews[0].id;
     });
@@ -53,4 +49,17 @@ export const ReviewSlider = ({props = defaultProps}) => {
             </div>
         </div>
     )
+}
+
+
+ReviewSlider.defaultProps = {
+    reviews: [
+        {
+            id: 0,
+            author: {
+                name: '',
+                photo: ''
+            }
+        }
+    ]
 }

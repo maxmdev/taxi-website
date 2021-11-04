@@ -1,7 +1,34 @@
 import {SectionHeader} from "./SeactionHeader";
 import '../Partnership.css';
 
-const defaultProps = {
+export const Partnership = (props) => {
+    return (
+        <SectionHeader
+            className={props.classname}
+            heading={props.heading}
+            description={props.description}
+            id={props.id}
+            content = {
+                <div className="partnership-content">
+                    {
+                        props.blocks.map(block => {
+                            return (
+                                <div key={block.key} className="partnership-content__info">
+                                    <div className={'info-image info-image__' + block.key}/>
+                                    <h4>{block.title}</h4>
+                                    <div className='info-border'/>
+                                    <p>{block.description}</p>
+                                </div>
+                            )
+                        })
+                    }
+                </div>
+            }
+        />
+    )
+}
+
+Partnership.defaultProps = {
     classname: 'partnership',
     heading: 'Profitable Cooperation',
     description: 'Why drivers choose us',
@@ -28,31 +55,4 @@ const defaultProps = {
             description: 'Ask questions in online chat or get phone support'
         }
     ]
-}
-
-export const Partnership = ({props = defaultProps}) => {
-    return (
-        <SectionHeader
-            className={props.classname}
-            heading={props.heading}
-            description={props.description}
-            id={props.id}
-            content = {
-                <div className="partnership-content">
-                    {
-                        props.blocks.map(block => {
-                            return (
-                                <div key={block.key} className="partnership-content__info">
-                                    <div className={'info-image info-image__' + block.key}/>
-                                    <h4>{block.title}</h4>
-                                    <div className='info-border'/>
-                                    <p>{block.description}</p>
-                                </div>
-                            )
-                        })
-                    }
-                </div>
-            }
-        />
-    )
 }

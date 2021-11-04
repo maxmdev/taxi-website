@@ -1,16 +1,7 @@
 import { useState } from "react";
 import { Modal } from "./Modal/Modal";
 
-const defaultProps = {
-    placeholder: {
-        name: 'Your Name (ex. John)',
-        phone: 'Your Phone Number'
-    },
-    buttonText: 'Call me Back',
-    disclaimer: 'By submitting this form, you confirm your consent to the processing of your personal data in' +
-        ' accordance with the GDPR.'
-}
-export const RequestForm = ({props = defaultProps}) => {
+export const RequestForm = (props) => {
     const minNameLength = 2;
     const minPhoneLength = 11;
 
@@ -117,4 +108,14 @@ export const RequestForm = ({props = defaultProps}) => {
             />
         </>
     )
+}
+
+RequestForm.defaultProps = {
+    placeholder: {
+        name: 'Your Name (ex. John)',
+        phone: 'Your Phone Number'
+    },
+    buttonText: 'Call me Back',
+    disclaimer: 'By submitting this form, you confirm your consent to the processing of your personal data in' +
+        ' accordance with the GDPR.'
 }

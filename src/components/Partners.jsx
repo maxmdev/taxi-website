@@ -3,7 +3,27 @@ import { Partner } from "./Partner";
 import Carousel, { CarouselItem } from "./Carousel";
 import '../Partners.css';
 
-const defaultProps = {
+export const Partners = (props) => {
+    return (
+        <SectionHeader
+            className={props.className}
+            heading = {props.heading}
+            description = {props.description}
+            id = {props.id}
+            content = {
+                <Carousel>
+                    {
+                        props.partners.map(
+                            partner => <CarouselItem key={partner.src}><Partner partner={partner}/></CarouselItem>
+                        )
+                    }
+                </Carousel>
+            }
+        />
+    )
+}
+
+Partners.defaultProps = {
     className: 'partners',
     heading: 'Our Partners',
     description: 'Reliable taxi aggregators',
@@ -40,22 +60,4 @@ const defaultProps = {
             srcOver: 'hover/maxim.png'
         }
     ]
-}
-
-export const Partners = ({props = defaultProps}) => {
-    return (
-        <SectionHeader
-            className={props.className}
-            heading = {props.heading}
-            description = {props.description}
-            id = {props.id}
-            content = {
-                <Carousel>
-                    {
-                        props.partners.map(partner => <CarouselItem key={partner.src}><Partner props={partner}/></CarouselItem>)
-                    }
-                </Carousel>
-            }
-        />
-    )
 }

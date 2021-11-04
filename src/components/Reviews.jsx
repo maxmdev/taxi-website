@@ -4,7 +4,35 @@ import {RequestForm} from "./RequestForm";
 import useWindowSize from "./useWindowSize/useWindowSize";
 import '../Reviews.css';
 
-const defaultProps = {
+export const Reviews = (props) => {
+    const { width } = useWindowSize();
+    const mobileWidth = 500;
+
+    return (
+        <SectionHeader
+            className={props.className}
+            heading={props.heading}
+            description={props.description}
+            id={props.id}
+            content={
+                <div className='reviews-content'>
+                    <div className='reviews-content__border'/>
+                    <div className='reviews-content__comments'>
+                        <ReviewSlider props={props.content}/>
+                        { width > mobileWidth && (<div className='comments-taxi'/>) }
+                    </div>
+                    <div className='reviews-content__request container'>
+                        <h2>Become a Driver</h2>
+                        <p>Leave your request and become a part of our team</p>
+                        <RequestForm/>
+                    </div>
+                </div>
+            }
+        />
+    )
+}
+
+Reviews.defaultProps = {
     className: 'reviews',
     heading: 'Drivers about our work',
     description: 'Analyze feedback and join to us',
@@ -43,32 +71,4 @@ const defaultProps = {
             }
         ]
     }
-}
-
-export const Reviews = ({props = defaultProps}) => {
-    const { width } = useWindowSize();
-    const mobileWidth = 500;
-
-    return (
-        <SectionHeader
-            className={props.className}
-            heading={props.heading}
-            description={props.description}
-            id={props.id}
-            content={
-                <div className='reviews-content'>
-                    <div className='reviews-content__border'/>
-                    <div className='reviews-content__comments'>
-                        <ReviewSlider props={props.content}/>
-                        { width > mobileWidth && (<div className='comments-taxi'/>) }
-                    </div>
-                    <div className='reviews-content__request container'>
-                        <h2>Become a Driver</h2>
-                        <p>Leave your request and become a part of our team</p>
-                        <RequestForm/>
-                    </div>
-                </div>
-            }
-        />
-    )
 }

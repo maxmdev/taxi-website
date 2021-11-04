@@ -3,31 +3,7 @@ import useWindowSize from "./useWindowSize/useWindowSize";
 
 import '../Workflow.css';
 
-const defaultProps = {
-    className: 'workflow',
-    id: 'workflow',
-    heading: 'How to Start',
-    description: 'Integration process could take from 2 to 5 hours',
-    content: [
-        {
-            image: 'agreement.svg',
-            header: 'Fill request form',
-            description: 'to talk with our manager about details'
-        },
-        {
-            image: 'handshake.svg',
-            header: 'Sign agreement',
-            description: 'with digital signature or in person'
-        },
-        {
-            image: 'taxi-car.svg',
-            header: 'Take orders',
-            description: 'at a convenient time and start to earn money'
-        }
-    ]
-}
-
-export const Workflow = ({props = defaultProps}) => {
+export const Workflow = (props) => {
     const mobileWidth = 610;
 
     const { width } = useWindowSize();
@@ -66,4 +42,28 @@ export const Workflow = ({props = defaultProps}) => {
             }
         />
     )
+}
+
+Workflow.defaultProps = {
+    className: 'workflow',
+    id: 'workflow',
+    heading: 'How to Start',
+    description: 'Integration process could take from 2 to 5 hours',
+    content: [
+        {
+            image: 'agreement.svg',
+            header: 'Fill request form',
+            description: 'to talk with our manager about details'
+        },
+        {
+            image: 'handshake.svg',
+            header: 'Sign agreement',
+            description: 'with digital signature or in person'
+        },
+        {
+            image: 'taxi-car.svg',
+            header: 'Take orders',
+            description: 'at a convenient time and start to earn money'
+        }
+    ]
 }
