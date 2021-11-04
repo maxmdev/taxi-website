@@ -17,9 +17,11 @@ export const Header = (props) => {
     })
 
     function copyData(event) {
-        setTimeout(() => {
-            setShowNotification(false);
-        }, 3000)
+        if(!showNotification) {
+            setTimeout(() => {
+                setShowNotification(false);
+            }, 3000)
+        }
 
         return setShowNotification(copyToClipboard(event));
     }
