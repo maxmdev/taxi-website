@@ -7,6 +7,8 @@ import {Notification} from "./Notification/Notification";
 import {useState} from "react";
 
 import '../Header.css';
+import {Modal} from "./Modal/Modal";
+import {ContactForm} from "./ContactForm";
 
 export const Header = (props) => {
     const {width} = useWindowSize();
@@ -57,6 +59,8 @@ export const Header = (props) => {
                     </div>
                     { width > hideTaxiImage && (<div className='header-content__right'/>) }
                 </div>
+
+                <Modal content={<ContactForm/>} show={true} header={props.contactFormTitle}/>
             </header>
         </>
     )
@@ -68,5 +72,6 @@ Header.defaultProps = {
     headerDescription: "Receive a car within a few hours and earn money from today",
     applyButtonText: "Contact us",
     requestButtonText: "Request a call",
-    headerLogoText: "Top Taxi"
+    headerLogoText: "Top Taxi",
+    contactFormTitle: 'Contact us'
 }
