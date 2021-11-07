@@ -1,5 +1,5 @@
 export const Button = (props) => {
     return (
-        <button className={'button ' + (props.classname || '')}>{props.text}</button>
+        <button className={'button ' + (props.classname || '')} onClick={props.onClick}>{props.text}</button>
     )
 }

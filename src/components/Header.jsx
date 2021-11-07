@@ -19,6 +19,10 @@ export const Header = (props) => {
         return false
     })
 
+    const [showContactForm, setShowContactForm] = useState(() => {
+        return false
+    });
+
     function copyData(event) {
         if(!showNotification) {
             setTimeout(() => {
@@ -27,6 +31,12 @@ export const Header = (props) => {
         }
 
         return setShowNotification(copyToClipboard(event));
+    }
+
+    function displayContactForm() {
+        if(!showContactForm) {
+            return setShowContactForm(true);
+        }
     }
 
     return (
@@ -53,14 +63,17 @@ export const Header = (props) => {
                             <p>{props.headerDescription}</p>
                         </div>
                         <div className='heading-buttons'>
-                            <Button text={props.applyButtonText}/>
+                            <Button text={props.applyButtonText} onClick={displayContactForm}/>
                             <Button text={props.requestButtonText} classname='heading-apply'/>
                         </div>
                     </div>
                     { width > hideTaxiImage && (<div className='header-content__right'/>) }
                 </div>
 
-                <Modal content={<ContactForm/>} show={true} header={props.contactFormTitle}/>
+                <Modal content={<ContactForm/>}
+                       show={showContactForm}
+                       onClose={() => setShowContactForm(false)}
+                       header={props.contactFormTitle}/>
             </header>
         </>
     )
