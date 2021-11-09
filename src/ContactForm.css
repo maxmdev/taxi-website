@@ -42,3 +42,13 @@ input.contact-form__button-submit {
 input.invalid, textarea.invalid {
     border-color: #f62b3f;
 }
+
+.form-message {
+    text-align: center;
+}
+
+.form-message__error {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #f62b3f;
+}
