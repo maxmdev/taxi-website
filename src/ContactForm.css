@@ -39,6 +39,6 @@ input.contact-form__button-submit {
     color: #ffffff;
 }
 
-input.invalid {
+input.invalid, textarea.invalid {
     border-color: #f62b3f;
 }

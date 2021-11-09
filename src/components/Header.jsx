@@ -69,12 +69,12 @@ export const Header = (props) => {
                     </div>
                     { width > hideTaxiImage && (<div className='header-content__right'/>) }
                 </div>
-
-                <Modal content={<ContactForm/>}
-                       show={showContactForm}
-                       onClose={() => setShowContactForm(false)}
-                       header={props.contactFormTitle}/>
             </header>
+
+            <Modal content={<ContactForm/>}
+                   show={showContactForm}
+                   onClose={() => setShowContactForm(false)}
+                   header={props.contactFormTitle}/>
         </>
     )
 }
