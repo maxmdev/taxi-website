@@ -1,45 +1,31 @@
 import '../ContactForm.css';
 import {useState} from "react";
+import {ApiClient} from "./API/ApiClient";
+import {Validate} from "./Validators/Validate";
 
 export const ContactForm = (props) => {
-    const minNameLength = 2;
-    const minTextLength = 10;
 
     const [input, setInput] = useState(() => {
         return {
             name: {
                 value: '',
-                valid: function () {
-                    return /^[a-zA-Z ]+$/.test(this.value) && this.value.length >= minNameLength;
-                },
-                toggleClass: function (event) {
-                    return toggleClass(event, this);
-                }
+                valid: function() { return Validate.validateName(this.value) },
+                toggleClass: function (event) { return toggleClass(event, this) }
             },
             email: {
                 value: '',
-                valid: function () {
-                    return /\S+@\S+\.\S+/.test(this.value);
-                },
-                toggleClass: function (event) {
-                    return toggleClass(event, this)
-                }
+                valid: function () { return Validate.validateEmail(this.value) },
+                toggleClass: function (event) { return toggleClass(event, this) }
             },
             topic: {
                 value: ''
             },
             text: {
                 value: '',
-                valid: function () {
-                    return this.value.length > minTextLength;
-                },
-                toggleClass: function (event) {
-                    return toggleClass(event, this)
-                }
+                valid: function () { return Validate.validateTextarea(this.value) },
+                toggleClass: function (event) { return toggleClass(event, this) }
             },
-            valid: function () {
-                return this.name.valid() && this.email.valid() && this.text.valid();
-            },
+            valid: function () { return Validate.validateForm(this) },
             state: {
                 value: '_INIT_',
                 message: ''
@@ -63,15 +49,7 @@ export const ContactForm = (props) => {
         if(input.valid()) {
             setInput({...input, state: {...input.state, value: '_SENT_'}});
 
-            fetch('/contact', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Access-Control-Allow-Origin': '*',
-                    'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept'
-                },
-                body: JSON.stringify(input)
-            }).then(response => response.json())
+            ApiClient({url: '/contact', method: 'POST', body: input})
                 .then(json => setInput({...input, state:
                         {...input.state, message: json, value: '_RESPONSE_'}}))
                 .catch(error => setInput({...input, state:

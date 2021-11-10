@@ -48,7 +48,8 @@ input.invalid, textarea.invalid {
 }
 
 .form-message__error {
-    padding: 10px;
+    padding: 14px;
+    margin: 10px;
     border-radius: 8px;
     border: 1px solid #f62b3f;
 }
