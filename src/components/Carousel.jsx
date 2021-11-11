@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 import '../carousel.css';
 import useWindowSize from "./useWindowSize/useWindowSize";
 

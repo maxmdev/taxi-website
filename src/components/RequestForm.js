@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Modal } from "./Modal/Modal";
+import {useState} from "react";
+import {Modal} from "./Modal/Modal";
 import {ApiClient} from "./API/ApiClient";
 import {Validate} from "./Validators/Validate";
 
