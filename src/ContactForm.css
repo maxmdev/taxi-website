@@ -53,3 +53,9 @@ input.invalid, textarea.invalid {
     border-radius: 8px;
     border: 1px solid #f62b3f;
 }
+
+@media (max-width: 600px) {
+    .contact-form input, .contact-form select, .contact-form textarea {
+        margin: 10px;
+    }
+}

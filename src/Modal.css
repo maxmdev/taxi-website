@@ -51,4 +51,8 @@
     .modal-content {
         max-width: 386px;
     }
+
+    .modal-content__body {
+        padding: 20px;
+    }
 }
