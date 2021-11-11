@@ -1,77 +1,52 @@
 import { useState } from "react";
 import { Modal } from "./Modal/Modal";
+import {ApiClient} from "./API/ApiClient";
+import {Validate} from "./Validators/Validate";
 
 export const RequestForm = (props) => {
-    const minNameLength = 2;
-    const minPhoneLength = 11;
-
     const [contact, setContact] = useState(() => {
         return {
             name: {
-              value: '',
-              valid: function () {
-                  return /^[a-zA-Z ]+$/.test(this.value) && this.value.length >= minNameLength;
-              },
-              toggleClass: function (event) {
-                  if(!this.valid()) {
-                          event.target.classList.add('invalid');
-                  }
-
-                  if(this.valid() || !this.value) {
-                      event.target.classList.remove('invalid')
-                  }
-              }
+                value: '',
+                valid: function() { return Validate.validateName(this.value) },
+                toggleClass: function (event) { return Validate.toggleClass(event, this) }
             },
             phone: {
-              value: '',
-              valid: function () {
-                  return /^(?:[+\d].*\d|\d)$/.test(this.value) && this.value.length >= minPhoneLength;
-              },
-              toggleClass: function (event) {
-                  if(!this.valid()) {
-                      event.target.classList.add('invalid');
-                  }
-
-                  if(this.valid() || !this.value) {
-                      event.target.classList.remove('invalid')
-                  }
-              }
+                value: '',
+                valid: function () { return Validate.validatePhone(this.value) },
+                toggleClass: function (event) { return Validate.toggleClass(event, this) }
             },
-            valid: function () {
-                return this.name.valid() && this.phone.valid()
-            }
+            valid: function () { return Validate.validateForm(this) }
         };
     });
 
     const [modal, setModal] = useState(() => {
-        return false
+        return {
+            show: false,
+            message: ''
+        }
     });
 
     const submit = event => {
         event.preventDefault();
 
         if(contact.valid()) {
-
-            fetch('/request', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({contact})
-            })
-                .then(response => response) //.json
-                .then(() => setContact({
-                    ...contact,
-                    name: {
-                        ...contact.name,
-                        value: ''
-                    },
-                    phone: {
-                        ...contact.phone,
-                        value: ''
-                    }
-                }))
-                .then(() => setModal(true))
+            ApiClient({url: '/request', method: 'POST', body: contact})
+                .then(response => setModal({...modal, show: true, message: response}))
+                .catch(error => {
+                    setContact({
+                        ...contact,
+                        name: {
+                            ...contact.name,
+                            value: ''
+                        },
+                        phone: {
+                            ...contact.phone,
+                            value: ''
+                        }
+                    })
+                    setModal({...modal, show: true, message: error.toString()})
+                })
         }
     }
 
@@ -101,10 +76,10 @@ export const RequestForm = (props) => {
             <p className='request-disclaimer'>{props.disclaimer}</p>
 
             <Modal
-                show={modal}
+                show={modal.show}
                 header={'Request a Call'}
-                onClose={() => setModal(false)}
-                content={'Thank you, John! Your request has been received!'}
+                onClose={() => setModal({...modal, show: false})}
+                content={modal.message}
             />
         </>
     )

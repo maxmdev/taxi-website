@@ -10,12 +10,12 @@ export const ContactForm = (props) => {
             name: {
                 value: '',
                 valid: function() { return Validate.validateName(this.value) },
-                toggleClass: function (event) { return toggleClass(event, this) }
+                toggleClass: function (event) { return Validate.toggleClass(event, this) }
             },
             email: {
                 value: '',
                 valid: function () { return Validate.validateEmail(this.value) },
-                toggleClass: function (event) { return toggleClass(event, this) }
+                toggleClass: function (event) { return Validate.toggleClass(event, this) }
             },
             topic: {
                 value: ''
@@ -23,7 +23,7 @@ export const ContactForm = (props) => {
             text: {
                 value: '',
                 valid: function () { return Validate.validateTextarea(this.value) },
-                toggleClass: function (event) { return toggleClass(event, this) }
+                toggleClass: function (event) { return Validate.toggleClass(event, this) }
             },
             valid: function () { return Validate.validateForm(this) },
             state: {
@@ -32,16 +32,6 @@ export const ContactForm = (props) => {
             }
         }
     })
-
-    function toggleClass(event, field) {
-        if (!field.valid()) {
-            event.target.classList.add('invalid');
-        }
-
-        if (field.valid() || !field.value) {
-            event.target.classList.remove('invalid')
-        }
-    }
 
     function submitForm(event) {
         event.preventDefault();
