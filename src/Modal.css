@@ -47,6 +47,30 @@
     padding: 60px;
 }
 
+.modal-content__body .request-form {
+    margin: 0;
+    flex-direction: column;
+    box-shadow: none;
+}
+
+.modal-content__body .request-form input {
+    padding: 20px 40px;
+    margin: 20px 0;
+}
+
+.modal-content__body .request-form button {
+    padding: 20px 40px;
+}
+
+.modal-content__body .request-disclaimer {
+    margin: 20px 0 0 0;
+    text-align: center;
+}
+
+.modal-content__body .request-form input.request-form__name, .modal-content__body input.request-form__phone {
+    border-radius: 40px;
+}
+
 @media (max-width: 600px) {
     .modal-content {
         max-width: 386px;

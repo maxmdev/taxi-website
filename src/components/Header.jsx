@@ -9,6 +9,7 @@ import {useState} from "react";
 import '../Header.css';
 import {Modal} from "./Modal/Modal";
 import {ContactForm} from "./ContactForm";
+import {RequestForm} from "./RequestForm";
 
 export const Header = (props) => {
     const {width} = useWindowSize();
@@ -17,11 +18,15 @@ export const Header = (props) => {
 
     const [showNotification, setShowNotification] = useState(() => {
         return false
-    })
+    });
 
     const [showContactForm, setShowContactForm] = useState(() => {
         return false
     });
+
+    const [showRequestForm, setShowRequestForm] = useState(() => {
+        return false;
+    })
 
     function copyData(event) {
         if(!showNotification) {
@@ -36,6 +41,12 @@ export const Header = (props) => {
     function displayContactForm() {
         if(!showContactForm) {
             return setShowContactForm(true);
+        }
+    }
+
+    function displayRequestForm() {
+        if(!showRequestForm) {
+            return setShowRequestForm(true);
         }
     }
 
@@ -63,8 +74,11 @@ export const Header = (props) => {
                             <p>{props.headerDescription}</p>
                         </div>
                         <div className='heading-buttons'>
-                            <Button text={props.applyButtonText} onClick={displayContactForm}/>
-                            <Button text={props.requestButtonText} classname='heading-apply'/>
+                            <Button text={props.applyButtonText}
+                                    onClick={displayContactForm}/>
+                            <Button text={props.requestButtonText}
+                                    onClick={displayRequestForm}
+                                    classname='heading-apply'/>
                         </div>
                     </div>
                     { width > hideTaxiImage && (<div className='header-content__right'/>) }
@@ -75,6 +89,11 @@ export const Header = (props) => {
                    show={showContactForm}
                    onClose={() => setShowContactForm(false)}
                    header={props.contactFormTitle}/>
+
+            <Modal content={<RequestForm/>}
+                   show={showRequestForm}
+                   onClose={()=> setShowRequestForm(false)}
+                   header={props.requestFormTitle}/>
         </>
     )
 }
@@ -86,5 +105,6 @@ Header.defaultProps = {
     applyButtonText: "Contact us",
     requestButtonText: "Request a call",
     headerLogoText: "Top Taxi",
-    contactFormTitle: 'Contact us'
+    contactFormTitle: "Contact us",
+    requestFormTitle: "Request a Call"
 }

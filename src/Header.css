@@ -186,6 +186,8 @@ button.heading-apply {
     visibility: hidden;
 }
 
+
+
 @media (max-width: 1024px) {
     .header-container__logo {
         margin: 0 20px;

@@ -21,7 +21,7 @@ export const Reviews = (props) => {
                         <ReviewSlider props={props.content}/>
                         { width > hideTaxiImage && (<div className='comments-taxi'/>) }
                     </div>
-                    <div className='reviews-content__request container'>
+                    <div className='reviews-content__request container' id='request-call'>
                         <h2>Become a Driver</h2>
                         <p>Leave your request and become a part of our team</p>
                         <RequestForm/>
