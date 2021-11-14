@@ -11,11 +11,12 @@ Features:
 6. Auto-Copying phone number from Header
 
 For achieving response design was developed a hook that removes elements
-directly from DOM depending on window size, avoid using CSS `display: none`.
+directly from DOM depending on window size, avoid using CSS
+property `display: none`.
 
 ## Screenshots
-1. Desktop:
+1. Desktop View:
 ![Desktop View](Desktop.png)
 
-2. Tablets:
+2. Tablets View:
 ![Tablet View](Tablet.png)
