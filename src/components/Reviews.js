@@ -1,3 +1,4 @@
+import React from 'react';
 import {SectionHeader} from "./SeactionHeader";
 import {ReviewSlider} from "./ReviewSlider";
 import {RequestForm} from "./RequestForm";

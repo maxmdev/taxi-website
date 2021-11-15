@@ -1,11 +1,17 @@
+import React from 'react';
+
 export const Partner = (props) => {
+    console.log(props.partner.src)
     return (
-        <a href={props.partner.href} title={props.partner.title} key={props.partner.src} target='_blank' rel='noreferrer'>
+        <a href={props.partner.href} title={props.partner.title} key={props.partner.src} target='_blank'
+           rel='noreferrer noopener'>
             <img className='item-image'
-                 src={require(`../images/partners/${props.partner.src}`).default}
+                 src={require(`../images/partners/${props.partner.src}`)}
                  alt={props.partner.title}
-                 onMouseOver={event => (event.currentTarget.src = require(`../images/partners/${props.partner.srcOver}`).default)}
-                 onMouseOut={event => (event.currentTarget.src = require(`../images/partners/${props.partner.src}`).default)}
+                 onMouseOver={event =>
+                     (event.currentTarget.src = require(`../images/partners/${props.partner.srcOver}`))}
+                 onMouseOut={event =>
+                     (event.currentTarget.src = require(`../images/partners/${props.partner.src}`))}
             />
         </a>
     )

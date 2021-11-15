@@ -1,3 +1,5 @@
+import React from 'react';
+
 export const Logo = (props) => {
     const scrollTop = () => {
         window.scrollTo({top: 0, behavior: 'smooth'});

@@ -1,4 +1,5 @@
 import './Styles.css';
+import React from 'react';
 import {Header} from './components/Header';
 import {Partnership} from './components/Partnership';
 import {Partners} from "./components/Partners";

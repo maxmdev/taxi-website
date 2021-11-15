@@ -24,7 +24,7 @@ export const ReviewSlider = ({props}) => {
                     props.reviews.map(review => {
                         return (
                             <div className={'comments-item__photo' + addActiveClass(active, review.id)} key={ review.id }>
-                                <img src={require(`../${review.author.photo}`).default}
+                                <img src={require(`../${review.author.photo}`)}
                                      className={'photo-round' + addActiveClass(active, review.id)}
                                      onClick={() => changeActive(review.id)}
                                      alt={review.author.name}/>

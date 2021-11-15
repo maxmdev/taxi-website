@@ -4,7 +4,7 @@ import {Logo} from "./Logo";
 import useWindowSize from "./useWindowSize/useWindowSize";
 import copyToClipboard from "../functions/copyToClipboard";
 import {Notification} from "./Notification/Notification";
-import {useState} from "react";
+import React, {useState} from "react";
 
 import '../Header.css';
 import {Modal} from "./Modal/Modal";

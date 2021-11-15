@@ -1,3 +1,4 @@
+import React from 'react';
 import useWindowSize from "./useWindowSize/useWindowSize";
 import {HamburgerNav} from "./HamburgerNav";
 

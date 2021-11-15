@@ -1,5 +1,6 @@
 import {SectionHeader} from "./SeactionHeader";
 import '../Partnership.css';
+import React from 'react';
 
 export const Partnership = (props) => {
     return (

@@ -1,3 +1,5 @@
+import React from 'react';
+
 import {SectionHeader} from "./SeactionHeader";
 import {Partner} from "./Partner";
 import Carousel, { CarouselItem } from "./Carousel";

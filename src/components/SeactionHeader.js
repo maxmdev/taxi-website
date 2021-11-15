@@ -1,3 +1,5 @@
+import React from 'react';
+
 export const SectionHeader = (props) => {
     return (
         <section className={props.className} id={props.id}>

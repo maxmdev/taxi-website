@@ -1,3 +1,4 @@
+import React from 'react';
 import {SectionHeader} from "./SeactionHeader";
 import useWindowSize from "./useWindowSize/useWindowSize";
 
@@ -21,7 +22,7 @@ export const Workflow = (props) => {
                         props.content.map((step, index) => {
                             return (
                                 <div className='workflow-content__item' key={'item' + index}>
-                                    { width > mobileWidth && (<img src={require(`../images/icons/${step.image}`).default}
+                                    { width > mobileWidth && (<img src={require(`../images/icons/${step.image}`)}
                                          alt={step.header + ' image'}
                                          className='workflow-content__image'/>)
                                     }
